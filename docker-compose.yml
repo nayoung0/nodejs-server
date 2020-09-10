@@ -1,0 +1,17 @@
+version: "3"
+services:
+  server:
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./server
+    container_name: "server"
+    volumes:
+      - ./server:/server
+      - /server/node_modules
+    networks:
+      - backend
+    ports:
+      - "5000:5000"
+networks:
+  backend:

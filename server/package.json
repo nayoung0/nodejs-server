@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "module": "main.js",
+  "scripts": {
+    "start": "DOTENV_CONFIG_PATH=./src/config/prod.env node -r esm -r dotenv/config src",
+    "dev": "DOTENV_CONFIG_PATH=./src/config/prod.env nodemon --watch src/ -r esm -r dotenv/config src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.4",
+    "morgan": "^1.10.0",
+    "voucher-code-generator": "^1.1.1"
+  }
+}
